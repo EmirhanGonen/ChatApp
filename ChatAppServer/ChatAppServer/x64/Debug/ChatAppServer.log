@@ -1,0 +1,3 @@
+﻿  ChatAppServer.cpp
+C:\C++Projects\ChatApp\ChatAppServer\ChatAppServer\ChatAppServer.cpp(29,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  ChatAppServer.vcxproj -> C:\C++Projects\ChatApp\ChatAppServer\x64\Debug\ChatAppServer.exe
