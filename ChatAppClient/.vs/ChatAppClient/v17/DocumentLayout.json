@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\C\u002B\u002BProjects\\ChatApp\\ChatAppClient\\",
+  "WorkspaceRootPath": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|C:\\C\u002B\u002BProjects\\ChatApp\\ChatAppClient\\ChatAppClient\\ChatAppClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\ChatAppClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|solutionrelative:ChatAppClient\\ChatAppClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\imgui\\imgui_impl_opengl3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|solutionrelative:ChatAppClient\\imgui\\imgui_impl_opengl3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "imgui_impl_opengl3.cpp",
+              "DocumentMoniker": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\imgui\\imgui_impl_opengl3.cpp",
+              "RelativeDocumentMoniker": "ChatAppClient\\imgui\\imgui_impl_opengl3.cpp",
+              "ToolTip": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\imgui\\imgui_impl_opengl3.cpp",
+              "RelativeToolTip": "ChatAppClient\\imgui\\imgui_impl_opengl3.cpp",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAMwKQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-17T15:41:14.477Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ChatAppClient.cpp",
-              "DocumentMoniker": "C:\\C\u002B\u002BProjects\\ChatApp\\ChatAppClient\\ChatAppClient\\ChatAppClient.cpp",
+              "DocumentMoniker": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\ChatAppClient.cpp",
               "RelativeDocumentMoniker": "ChatAppClient\\ChatAppClient.cpp",
-              "ToolTip": "C:\\C\u002B\u002BProjects\\ChatApp\\ChatAppClient\\ChatAppClient\\ChatAppClient.cpp",
+              "ToolTip": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\ChatAppClient.cpp",
               "RelativeToolTip": "ChatAppClient\\ChatAppClient.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-16T13:44:32.032Z",
               "EditorCaption": ""

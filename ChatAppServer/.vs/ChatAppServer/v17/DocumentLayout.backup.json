@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\C\u002B\u002BProjects\\ChatApp\\ChatAppServer\\",
+  "WorkspaceRootPath": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A6EC1BC-9B5F-4A14-BBC6-D8BF56E0A01B}|ChatAppServer\\ChatAppServer.vcxproj|C:\\C\u002B\u002BProjects\\ChatApp\\ChatAppServer\\ChatAppServer\\ChatAppServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{9A6EC1BC-9B5F-4A14-BBC6-D8BF56E0A01B}|ChatAppServer\\ChatAppServer.vcxproj|C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppServer\\ChatAppServer\\ChatAppServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9A6EC1BC-9B5F-4A14-BBC6-D8BF56E0A01B}|ChatAppServer\\ChatAppServer.vcxproj|solutionrelative:ChatAppServer\\ChatAppServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ChatAppServer.cpp",
-              "DocumentMoniker": "C:\\C\u002B\u002BProjects\\ChatApp\\ChatAppServer\\ChatAppServer\\ChatAppServer.cpp",
+              "DocumentMoniker": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppServer\\ChatAppServer\\ChatAppServer.cpp",
               "RelativeDocumentMoniker": "ChatAppServer\\ChatAppServer.cpp",
-              "ToolTip": "C:\\C\u002B\u002BProjects\\ChatApp\\ChatAppServer\\ChatAppServer\\ChatAppServer.cpp",
+              "ToolTip": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppServer\\ChatAppServer\\ChatAppServer.cpp",
               "RelativeToolTip": "ChatAppServer\\ChatAppServer.cpp",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAGUAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-16T13:43:11.287Z",
               "EditorCaption": ""

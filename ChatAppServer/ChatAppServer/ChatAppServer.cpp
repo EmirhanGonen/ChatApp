@@ -13,7 +13,7 @@ void Cleanup() { WSACleanup(); }
 void CloseSocket(SOCKET socket) { closesocket(socket); }
 void CloseSocketAndCleanup(SOCKET socket) { closesocket(socket); Cleanup(); }
 
-bool Initialize() {
+bool Initialize() {	
 	WSADATA wsaDATA;
 	if (WSAStartup(MAKEWORD(2, 2), &wsaDATA) != 0) {
 		cout << "Winsock initialize failed!" << endl;
@@ -25,9 +25,9 @@ bool Initialize() {
 void BroadcastMessage(const string& message, SOCKET sender) {
 	for (SOCKET client : clients)
 	{
-		if (client != sender) {
+		//if (client != sender) {
 			send(client, message.c_str(), message.length(), 0);
-		}
+		//}
 	}
 }
 
@@ -65,7 +65,7 @@ int main()
 	}
 
 	serverAddr.sin_family = AF_INET;
-	serverAddr.sin_addr.s_addr = INADDR_ANY;
+	serverAddr.sin_addr.S_un.S_addr = INADDR_ANY;
 	serverAddr.sin_port = htons(port);
 
 	if (bind(serverSocket, (sockaddr*)&serverAddr, sizeof(serverAddr)) == SOCKET_ERROR)
