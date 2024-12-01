@@ -32,3 +32,5 @@
 *.app
 
 .vs/
+ChatAppClient/.vs/ChatAppClient/v17/Browse.VC.db
+ChatAppServer/.vs/ChatAppServer/v17/Browse.VC.db
