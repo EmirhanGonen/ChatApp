@@ -1,3 +1,4 @@
 ﻿  ChatAppServer.cpp
 C:\Users\emirh\Software\C++\ChatApp\ChatAppServer\ChatAppServer\ChatAppServer.cpp(29,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  LINK : C:\Users\emirh\Software\C++\ChatApp\ChatAppServer\x64\Debug\ChatAppServer.exe not found or not built by the last incremental link; performing full link
   ChatAppServer.vcxproj -> C:\Users\emirh\Software\C++\ChatApp\ChatAppServer\x64\Debug\ChatAppServer.exe
