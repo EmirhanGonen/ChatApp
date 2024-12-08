@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\",
+  "WorkspaceRootPath": "S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\clientWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|solutionrelative:ChatAppClient\\clientWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\chatClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\chatClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|solutionrelative:ChatAppClient\\chatClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\clientWindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\clientWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|solutionrelative:ChatAppClient\\clientWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\clientWindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|solutionrelative:ChatAppClient\\clientWindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\chatClient.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\chatClient.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|solutionrelative:ChatAppClient\\chatClient.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\ChatAppClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\ChatAppClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{82A62E6C-C8A8-4A82-8FF9-ADACBDB0C243}|ChatAppClient\\ChatAppClient.vcxproj|solutionrelative:ChatAppClient\\ChatAppClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -35,27 +35,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "chatClient.cpp",
-              "DocumentMoniker": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\chatClient.cpp",
-              "RelativeDocumentMoniker": "ChatAppClient\\chatClient.cpp",
-              "ToolTip": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\chatClient.cpp",
-              "RelativeToolTip": "ChatAppClient\\chatClient.cpp",
-              "ViewState": "AgIAADAAAAAAAAAAAAApwD4AAAAdAAAAAAAAAA==",
+              "Title": "clientWindow.cpp",
+              "DocumentMoniker": "S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\clientWindow.cpp",
+              "RelativeDocumentMoniker": "ChatAppClient\\clientWindow.cpp",
+              "ToolTip": "S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\clientWindow.cpp",
+              "RelativeToolTip": "ChatAppClient\\clientWindow.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-01T08:55:11.259Z",
+              "WhenOpened": "2024-12-01T08:55:52.045Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "clientWindow.cpp",
-              "DocumentMoniker": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\clientWindow.cpp",
-              "RelativeDocumentMoniker": "ChatAppClient\\clientWindow.cpp",
-              "ToolTip": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\clientWindow.cpp",
-              "RelativeToolTip": "ChatAppClient\\clientWindow.cpp",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFgAAAAbAAAAAAAAAA==",
+              "Title": "chatClient.cpp",
+              "DocumentMoniker": "S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\chatClient.cpp",
+              "RelativeDocumentMoniker": "ChatAppClient\\chatClient.cpp",
+              "ToolTip": "S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\chatClient.cpp",
+              "RelativeToolTip": "ChatAppClient\\chatClient.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-01T08:55:52.045Z",
+              "WhenOpened": "2024-12-01T08:55:11.259Z",
               "EditorCaption": ""
             }
           ]
@@ -68,9 +68,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "clientWindow.h",
-              "DocumentMoniker": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\clientWindow.h",
+              "DocumentMoniker": "S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\clientWindow.h",
               "RelativeDocumentMoniker": "ChatAppClient\\clientWindow.h",
-              "ToolTip": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\clientWindow.h",
+              "ToolTip": "S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\clientWindow.h",
               "RelativeToolTip": "ChatAppClient\\clientWindow.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -81,27 +81,25 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "ChatAppClient.cpp",
-              "DocumentMoniker": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\ChatAppClient.cpp",
+              "DocumentMoniker": "S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\ChatAppClient.cpp",
               "RelativeDocumentMoniker": "ChatAppClient\\ChatAppClient.cpp",
-              "ToolTip": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\ChatAppClient.cpp",
+              "ToolTip": "S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\ChatAppClient.cpp",
               "RelativeToolTip": "ChatAppClient\\ChatAppClient.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-16T13:44:32.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T13:44:32.032Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "chatClient.h",
-              "DocumentMoniker": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\chatClient.h",
+              "DocumentMoniker": "S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\chatClient.h",
               "RelativeDocumentMoniker": "ChatAppClient\\chatClient.h",
-              "ToolTip": "C:\\Users\\emirh\\Software\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\chatClient.h",
+              "ToolTip": "S:\\C\u002B\u002B\\ChatApp\\ChatAppClient\\ChatAppClient\\chatClient.h",
               "RelativeToolTip": "ChatAppClient\\chatClient.h",
               "ViewState": "AgIAAAwAAAAAAAAAAAAowB8AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-01T08:55:01.039Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T08:55:01.039Z"
             }
           ]
         }
