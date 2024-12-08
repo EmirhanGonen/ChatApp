@@ -93,7 +93,15 @@ void clientWindow::Tick()
 	}
 
 	for (std::string& message : chat_client->GetClientMessages()) {
-		ImGui::Text(message.c_str());
+		if (ImGui::Selectable(message.c_str()))
+		{
+			std::vector<std::string> messages = chat_client->GetClientMessages();
+			auto position = std::find(messages.begin(), messages.end(), message);
+			if (position != messages.end()) {
+				messages.erase(position);
+			}
+		}
+		//ImGui::Text();
 	}
 
 	if (ImGui::InputText("Message", client_message_buffer, sizeof(client_message_buffer), ImGuiInputTextFlags_EnterReturnsTrue))
