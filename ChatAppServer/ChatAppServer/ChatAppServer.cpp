@@ -87,7 +87,7 @@ int main()
 
 	while (true)
 	{
-		clientSocket = accept(serverSocket, (sockaddr*)&clientAddr, &clientAddrSize);
+		clientSocket = accept(serverSocket, reinterpret_cast<sockaddr*>(&clientAddr), &clientAddrSize);
 		if (clientSocket == INVALID_SOCKET)
 		{
 			cout << "connection is not accepted" << endl;

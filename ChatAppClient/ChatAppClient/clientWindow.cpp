@@ -1,4 +1,8 @@
 #include "clientWindow.h"
+
+#include <iostream>
+#include <ostream>
+
 #include "chatClient.h"
 #include <GLFW/glfw3.h>
 #include "imgui/imgui.h"
@@ -91,9 +95,11 @@ void clientWindow::Tick()
 		ImGui::End();
 		return;
 	}
-
 	for (std::string& message : chat_client->GetClientMessages()) {
-		ImGui::Text(message.c_str());
+		if (ImGui::Selectable(message.c_str()))
+		{
+			chat_client->EraseMessage(message);
+		}
 	}
 
 	if (ImGui::InputText("Message", client_message_buffer, sizeof(client_message_buffer), ImGuiInputTextFlags_EnterReturnsTrue))

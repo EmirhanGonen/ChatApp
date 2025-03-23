@@ -7,7 +7,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0774c9c-0a9f-43a6-ad98-2fa655096dfd" name="Changes" comment="" />
+    <list default="true" id="f0774c9c-0a9f-43a6-ad98-2fa655096dfd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/.idea/.idea.ChatAppClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/.idea/.idea.ChatAppClient/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/ChatAppClient.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/ChatAppClient.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/chatClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/chatClient.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/chatClient.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/chatClient.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/clientWindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/clientWindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/imgui.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.exe.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.exe.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/ChatAppClient.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/ChatAppClient.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/Cl.items.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/link.secondary.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/link.secondary.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/ChatAppClient.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/ChatAppClient/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/x64/Debug/ChatAppClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/x64/Debug/ChatAppClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppClient/x64/Debug/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppClient/x64/Debug/imgui.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ChatAppServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChatAppServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/ChatAppServer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/ChatAppServer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.exe.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.exe.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/ChatAppServer.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/ChatAppServer.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/Cl.items.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/link.secondary.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/link.secondary.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/x64/Debug/ChatAppServer.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatAppServer/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppServer/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/ChatAppServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/ChatAppServer.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +62,7 @@
 }</component>
   <component name="ProjectId" id="2pwBiWYTaoYs17ujI5u7ILRa2eG" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -32,7 +71,8 @@
     &quot;C/C++ Project.ChatAppServer.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/imgui&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -73,6 +113,12 @@
       <updated>1733667385579</updated>
       <workItem from="1733667386756" duration="84000" />
       <workItem from="1733667479112" duration="398000" />
+      <workItem from="1733667903925" duration="1087000" />
+      <workItem from="1733773621941" duration="366000" />
+      <workItem from="1733944494410" duration="281000" />
+      <workItem from="1734063235410" duration="677000" />
+      <workItem from="1742730840196" duration="320000" />
+      <workItem from="1742731222585" duration="308000" />
     </task>
     <servers />
   </component>
