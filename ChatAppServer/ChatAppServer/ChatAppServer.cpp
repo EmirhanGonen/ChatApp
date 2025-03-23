@@ -3,6 +3,8 @@
 #include <thread>
 #include <vector>
 
+#include "MessagePackage.h"
+
 #pragma comment (lib,"ws2_32.lib")
 
 using namespace std;
@@ -22,7 +24,7 @@ bool Initialize() {
 	return true;
 }
 
-void BroadcastMessage(const string& message, SOCKET sender) {
+void BroadcastMessage(const MessagePackage& message, SOCKET sender) {
 	for (SOCKET client : clients)
 	{
 		//if (client != sender) {

@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 
+enum class MessageType : uint8_t;
+struct MessagePackage;
 
 class chatClient
 {
@@ -11,7 +13,7 @@ public:
 	bool ConnectToServer();
 	void DisconnectToServer();
 
-	void SendMessageToServer(std::string message, const char message_buffer[]);
+	void SendMessageToServer(MessageType messageType, std::string message);
 	void EraseMessage(std::string message);
 
 

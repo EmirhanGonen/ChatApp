@@ -5,6 +5,8 @@
 #include <iostream>
 #include <thread>
 
+#include "MessagePackage.h"
+
 #pragma comment(lib, "ws2_32.lib")
 
 using namespace std;
@@ -66,13 +68,24 @@ void chatClient::DisconnectToServer()
     WSACleanup();
 }
 
-void chatClient::SendMessageToServer(std::string message, const char message_buffer[])
+// void chatClient::SendMessageToServer(std::string message, const char message_buffer[])
+// {
+//     string message_with_username(user_name + ": " + message);
+//     if (!message.empty())
+//     {
+//         send(clientSocket, message_with_username.c_str(), message_with_username.length(), 0);
+//         memset(&message_buffer, 0, sizeof(message_buffer));
+//     }
+// }
+
+void chatClient::SendMessageToServer(MessageType messageType, std::string message)
 {
-    string message_with_username(user_name + ": " + message);
+    MessagePackage package(messageType, message);
+
+    // string message_with_username(user_name + ": " + message);
     if (!message.empty())
     {
-        send(clientSocket, message_with_username.c_str(), message_with_username.length(), 0);
-        memset(&message_buffer, 0, sizeof(message_buffer));
+        send(clientSocket, reinterpret_cast<char*>(&package), sizeof(package), 0);
     }
 }
 
@@ -94,18 +107,24 @@ void chatClient::CreateReceiveChannel()
 
 void chatClient::ReceiveMessages()
 {
-    char buffer[1024];
+    MessagePackage package;
     int recvSize;
 
     while (true)
     {
-        recvSize = recv(clientSocket, buffer, sizeof(buffer), 0);
+        recvSize = recv(clientSocket, reinterpret_cast<char*>(&package), sizeof(package), 0);
         if (recvSize > 0)
         {
-            buffer[recvSize] = '\0';
-            messages.push_back(ModifyMessage(buffer, user_name));
-            //messages.push_back(buffer);
-            cout << "Mesaj: " << buffer << endl;
+            switch (package.m_MessageType)
+            {
+            case MessageType::SendMessage:
+                package.message[recvSize] = '\0';
+                messages.push_back(ModifyMessage(package.message, user_name));
+                cout << "Mesaj: " << package.message << endl;
+                break;
+            case MessageType::EraseMessage:
+                break;
+            }
         }
     }
 }
@@ -116,7 +135,7 @@ std::string chatClient::ModifyMessage(const std::string& receivedMessage, const 
     if (colonPos != string::npos)
     {
         string sender = receivedMessage.substr(0, colonPos);
-        string content = receivedMessage.substr(colonPos + 1); 
+        string content = receivedMessage.substr(colonPos + 1);
 
         if (sender == userName)
         {
