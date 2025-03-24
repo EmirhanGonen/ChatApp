@@ -59,6 +59,8 @@ bool chatClient::ConnectToServer()
     cout << "Connected to the server. You can send a message" << endl;
     connected_to_server = true;
     CreateReceiveChannel();
+
+    return true;
 }
 
 void chatClient::DisconnectToServer()
@@ -80,6 +82,7 @@ void chatClient::DisconnectToServer()
 
 void chatClient::SendMessageToServer(MessageType messageType, std::string message)
 {
+    //std::string message_to_send(user_name + ": " + message);
     MessagePackage package(messageType, message);
 
     // string message_with_username(user_name + ": " + message);
@@ -92,7 +95,15 @@ void chatClient::SendMessageToServer(MessageType messageType, std::string messag
 void chatClient::EraseMessage(std::string message)
 {
     const vector<string>::iterator it = std::find(messages.begin(), messages.end(), message);
-    messages.erase(it);
+    if (it != messages.end())
+    {
+        //messages.erase(it);
+        SendMessageToServer(MessageType::EraseMessagePackage, message);
+    }
+    else
+    {
+        cout << "Message not found" << endl;
+    }
 }
 
 void chatClient::CreateReceiveChannel()
@@ -108,21 +119,26 @@ void chatClient::CreateReceiveChannel()
 void chatClient::ReceiveMessages()
 {
     MessagePackage package;
-    int recvSize;
 
     while (true)
     {
-        recvSize = recv(clientSocket, reinterpret_cast<char*>(&package), sizeof(package), 0);
+        int recvSize = recv(clientSocket, reinterpret_cast<char*>(&package), sizeof(package), 0);
         if (recvSize > 0)
         {
             switch (package.m_MessageType)
             {
-            case MessageType::SendMessage:
+            case MessageType::SendMessagePackage:
                 package.message[recvSize] = '\0';
                 messages.push_back(ModifyMessage(package.message, user_name));
                 cout << "Mesaj: " << package.message << endl;
                 break;
-            case MessageType::EraseMessage:
+            case MessageType::EraseMessagePackage:
+                const vector<string>::iterator it = std::find(messages.begin(), messages.end(), package.message);
+
+                if (it != messages.end())
+                {
+                    messages.erase(it);
+                }
                 break;
             }
         }

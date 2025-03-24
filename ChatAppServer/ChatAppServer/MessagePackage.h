@@ -25,7 +25,7 @@ struct MessagePackage
     {
         m_MessageType = type;
         memset(message, 0, sizeof(message));
-        strncpy(message, msg.c_str(), sizeof(message) - 1);
+        strncpy_s(message, msg.c_str(), sizeof(message) - 1);
     }
 };
 #endif

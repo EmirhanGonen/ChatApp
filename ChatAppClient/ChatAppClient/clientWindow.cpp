@@ -107,7 +107,7 @@ void clientWindow::Tick()
 	if (ImGui::InputText("Message", client_message_buffer, sizeof(client_message_buffer), ImGuiInputTextFlags_EnterReturnsTrue))
 	{
 		string message(client_message_buffer);
-		chat_client->SendMessageToServer(MessageType::SendMessage, client_message_buffer);
+		chat_client->SendMessageToServer(MessageType::SendMessagePackage, client_message_buffer);
 		memset(client_message_buffer, 0, sizeof(client_message_buffer));
 	}
 	ImGui::End();

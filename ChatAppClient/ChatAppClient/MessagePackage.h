@@ -6,8 +6,8 @@
 
 enum class MessageType : uint8_t
 {
-    SendMessage = 0,
-    EraseMessage = 1
+    SendMessagePackage = 0,
+    EraseMessagePackage = 1
 };
 
 struct MessagePackage
@@ -17,7 +17,7 @@ struct MessagePackage
 
     MessagePackage()
     {
-        m_MessageType = MessageType::SendMessage;
+        m_MessageType = MessageType::SendMessagePackage;
         memset(message, 0, sizeof(message));
     }
 
@@ -25,7 +25,7 @@ struct MessagePackage
     {
         m_MessageType = type;
         memset(message, 0, sizeof(message));
-        strncpy(message, msg.c_str(), sizeof(message) - 1);
+        strncpy_s(message, msg.c_str(), sizeof(message) - 1);
     }
 };
 #endif
