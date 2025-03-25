@@ -83,7 +83,7 @@ void chatClient::DisconnectToServer()
 void chatClient::SendMessageToServer(MessageType messageType, std::string message)
 {
     if (message.empty()) return; // Boş mesajları engelle
-
+    std::lock_guard<std::mutex> lock(messagesMutex);
     MessagePackage package(messageType, message, user_name, user_name);
     int packageSize = sizeof(MessagePackage);
     int totalSent = 0;
@@ -137,6 +137,12 @@ void chatClient::CreateReceiveChannel()
     receiveThread.detach();
 }
 
+std::vector<std::string> chatClient::GetClientMessages()
+{
+    lock_guard<mutex> lock(messagesMutex);
+    return messages;
+}
+
 void chatClient::ReceiveMessages()
 {
     while (connected_to_server)
@@ -170,7 +176,6 @@ void chatClient::ReceiveMessages()
             receivedMessages.push_back(package);
             cout << "Mesaj alındı: " << package.message << endl;
             break;
-
         case MessageType::EraseMessagePackage:
             {
                 cout << "Silme isteği alındı: " << package.message << endl;
@@ -199,6 +204,7 @@ void chatClient::ReceiveMessages()
                     cout << "Silinecek mesaj bulunamadı!" << endl;
                 }
             }
+            lock_guard<mutex> lock(messagesMutex);
             break;
         }
     }

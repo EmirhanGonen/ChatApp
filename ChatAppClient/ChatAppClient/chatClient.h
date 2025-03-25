@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
-
+#include <mutex>
 #include "MessagePackage.h"
 
 class chatClient
@@ -18,12 +18,13 @@ public:
 
 	void SetUserName(const std::string new_user_name) { user_name = new_user_name; }
 	bool GetClientConnectedToServer() const { return connected_to_server; }
-	std::vector<std::string> GetClientMessages() const { return messages; }
+	std::vector<std::string> GetClientMessages();
 
 protected:
 	void ReceiveMessages();
 
 private:
+	mutable std::mutex messagesMutex;
 	std::vector<MessagePackage> receivedMessages;
 	void CreateReceiveChannel();
 	std::string ModifyMessage(const std::string& receivedMessage, const std::string& userName);

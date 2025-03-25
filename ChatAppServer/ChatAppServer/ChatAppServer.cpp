@@ -2,7 +2,7 @@
 #include <WinSock2.h>
 #include <thread>
 #include <vector>
-
+#include <mutex>
 #include "MessagePackage.h"
 
 #pragma comment (lib,"ws2_32.lib")
@@ -10,50 +10,66 @@
 using namespace std;
 
 vector<SOCKET> clients;
+mutex clientsMutex;
 
 void Cleanup() { WSACleanup(); }
 void CloseSocket(SOCKET socket) { closesocket(socket); }
 
-void CloseSocketAndCleanup(SOCKET socket)
-{
+void CloseSocketAndCleanup(SOCKET socket) {
     closesocket(socket);
     Cleanup();
 }
 
-bool Initialize()
-{
+bool Initialize() {
     WSADATA wsaDATA;
-    if (WSAStartup(MAKEWORD(2, 2), &wsaDATA) != 0)
-    {
-        cout << "Winsock initialize failed!" << endl;
-        return false;
-    }
-    return true;
+    return WSAStartup(MAKEWORD(2, 2), &wsaDATA) == 0;
 }
 
-void BroadcastMessage(const MessagePackage& message, SOCKET sender)
-{
-    for (SOCKET client : clients)
-    {
-        //if (client != sender) {
-        send(client, reinterpret_cast<const char*>(&message), sizeof(message), 0);
-        //}
+void BroadcastMessage(const MessagePackage& message, SOCKET sender) {
+    lock_guard<mutex> lock(clientsMutex); // Clients vektörünü kilitle
+    
+    const char* data = reinterpret_cast<const char*>(&message);
+    int dataSize = sizeof(MessagePackage);
+
+    for (SOCKET client : clients) {
+        int totalSent = 0;
+        while (totalSent < dataSize) {
+            int sent = send(client, data + totalSent, dataSize - totalSent, 0);
+            if (sent == SOCKET_ERROR) {
+                cerr << "Gönderme hatası: " << WSAGetLastError() << endl;
+                {
+                    lock_guard<mutex> lock(clientsMutex);
+                    clients.erase(remove(clients.begin(), clients.end(), client), clients.end());
+                }
+                closesocket(client);
+                break;
+            }
+            totalSent += sent;
+        }
     }
 }
 
-void HandleClient(SOCKET clientSocket)
-{
+void HandleClient(SOCKET clientSocket) {
     MessagePackage package;
-    int recvSize;
+    int packageSize = sizeof(MessagePackage);
 
-    while ((recvSize = recv(clientSocket, reinterpret_cast<char*>(&package), sizeof(package), 0)) > 0)
-    {
+    while (true) {
+        int totalReceived = 0;
+        while (totalReceived < packageSize) {
+            int recvSize = recv(clientSocket, reinterpret_cast<char*>(&package) + totalReceived, packageSize - totalReceived, 0);
+            if (recvSize <= 0) {
+                {
+                    lock_guard<mutex> lock(clientsMutex);
+                    clients.erase(remove(clients.begin(), clients.end(), clientSocket), clients.end());
+                }
+                closesocket(clientSocket);
+                return;
+            }
+            totalReceived += recvSize;
+        }
         BroadcastMessage(package, clientSocket);
     }
-    closesocket(clientSocket);
-    clients.erase(remove(clients.begin(), clients.end(), clientSocket), clients.end());
 }
-
 int main()
 {
     if (!Initialize())

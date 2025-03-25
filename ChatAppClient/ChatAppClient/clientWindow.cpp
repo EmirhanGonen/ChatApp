@@ -56,9 +56,8 @@ void clientWindow::StartTick()
 
 void clientWindow::Tick()
 {
-
 	ImGui::Begin("Chat App");
-
+	
 	if (ImGui::Checkbox("Connect", &will_connect))
 	{
 		if (will_connect && !chat_client->GetClientConnectedToServer()) {
