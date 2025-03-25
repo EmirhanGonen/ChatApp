@@ -13,18 +13,23 @@ enum class MessageType : uint8_t
 struct MessagePackage
 {
     MessageType m_MessageType;
+    char m_MessageOwner[64];   
+    char m_PackageOwner[64];   
     char message[1024];
 
     MessagePackage()
     {
+        memset(this, 0, sizeof(MessagePackage)); // Tüm yapıyı temizle
         m_MessageType = MessageType::SendMessagePackage;
-        memset(message, 0, sizeof(message));
     }
 
-    MessagePackage(MessageType type, const std::string& msg)
+    MessagePackage(MessageType type, const std::string& msg, const std::string& messageOwner, const std::string& packageOwner)
     {
+        memset(this, 0, sizeof(MessagePackage)); // Belleği temizle
         m_MessageType = type;
-        memset(message, 0, sizeof(message));
+
+        strncpy_s(m_MessageOwner, messageOwner.c_str(), sizeof(m_MessageOwner) - 1);
+        strncpy_s(m_PackageOwner, packageOwner.c_str(), sizeof(m_PackageOwner) - 1);
         strncpy_s(message, msg.c_str(), sizeof(message) - 1);
     }
 };

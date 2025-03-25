@@ -2,8 +2,7 @@
 #include <string>
 #include <vector>
 
-enum class MessageType : uint8_t;
-struct MessagePackage;
+#include "MessagePackage.h"
 
 class chatClient
 {
@@ -25,6 +24,7 @@ protected:
 	void ReceiveMessages();
 
 private:
+	std::vector<MessagePackage> receivedMessages;
 	void CreateReceiveChannel();
 	std::string ModifyMessage(const std::string& receivedMessage, const std::string& userName);
 

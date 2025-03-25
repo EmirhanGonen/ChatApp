@@ -82,27 +82,48 @@ void chatClient::DisconnectToServer()
 
 void chatClient::SendMessageToServer(MessageType messageType, std::string message)
 {
-    //std::string message_to_send(user_name + ": " + message);
-    MessagePackage package(messageType, message);
+    if (message.empty()) return; // Boş mesajları engelle
 
-    // string message_with_username(user_name + ": " + message);
-    if (!message.empty())
+    MessagePackage package(messageType, message, user_name, user_name);
+    int packageSize = sizeof(MessagePackage);
+    int totalSent = 0;
+
+    cout << "Sunucuya mesaj gönderiliyor..." << endl;
+    cout << "Mesaj türü: " << static_cast<int>(messageType) << endl;
+    cout << "Mesaj sahibi: " << package.m_MessageOwner << ", Paket sahibi: " << package.m_PackageOwner << endl;
+    cout << "Mesaj içeriği: " << package.message << endl;
+
+    while (totalSent < packageSize)
     {
-        send(clientSocket, reinterpret_cast<char*>(&package), sizeof(package), 0);
+        int sent = send(clientSocket, ((char*)&package) + totalSent, packageSize - totalSent, 0);
+        if (sent == SOCKET_ERROR)
+        {
+            cout << "Mesaj gönderilemedi, hata kodu: " << WSAGetLastError() << endl;
+            return;
+        }
+        totalSent += sent;
+        cout << "Gönderilen bayt: " << sent << " / " << packageSize << endl;
     }
+
+    cout << "Mesaj başarıyla gönderildi." << endl;
 }
 
 void chatClient::EraseMessage(std::string message)
 {
-    const vector<string>::iterator it = std::find(messages.begin(), messages.end(), message);
-    if (it != messages.end())
+    auto foundMessage = std::find_if(receivedMessages.begin(), receivedMessages.end(),
+                                     [&](const MessagePackage& msg)
+                                     {
+                                         return msg.message == message;
+                                     });
+
+    if (foundMessage != receivedMessages.end())
     {
-        //messages.erase(it);
         SendMessageToServer(MessageType::EraseMessagePackage, message);
+        cout << "Mesaj silme isteği gönderildi: " << message << endl;
     }
     else
     {
-        cout << "Message not found" << endl;
+        cout << "Silinmek istenen mesaj bulunamadı." << endl;
     }
 }
 
@@ -118,29 +139,67 @@ void chatClient::CreateReceiveChannel()
 
 void chatClient::ReceiveMessages()
 {
-    MessagePackage package;
-
-    while (true)
+    while (connected_to_server)
     {
-        int recvSize = recv(clientSocket, reinterpret_cast<char*>(&package), sizeof(package), 0);
-        if (recvSize > 0)
-        {
-            switch (package.m_MessageType)
-            {
-            case MessageType::SendMessagePackage:
-                package.message[recvSize] = '\0';
-                messages.push_back(ModifyMessage(package.message, user_name));
-                cout << "Mesaj: " << package.message << endl;
-                break;
-            case MessageType::EraseMessagePackage:
-                const vector<string>::iterator it = std::find(messages.begin(), messages.end(), package.message);
+        MessagePackage package;
+        int totalReceived = 0;
+        int packageSize = sizeof(MessagePackage);
+        
+        cout << "Mesaj alımı bekleniyor..." << endl;
 
-                if (it != messages.end())
-                {
-                    messages.erase(it);
-                }
-                break;
+        while (totalReceived < packageSize)
+        {
+            int received = recv(clientSocket, ((char*)&package) + totalReceived, packageSize - totalReceived, 0);
+            if (received <= 0)
+            {
+                cout << "Bağlantı kesildi veya recv hatası oluştu." << endl;
+                DisconnectToServer();
+                return;
             }
+            totalReceived += received;
+            cout << "Alınan bayt sayısı: " << received << " / " << packageSize << endl;
+        }
+
+        cout << "Mesaj başarıyla alındı. Tür: " << static_cast<int>(package.m_MessageType) << endl;
+        cout << "Mesaj İçeriği: " << package.message << endl;
+
+        switch (package.m_MessageType)
+        {
+        case MessageType::SendMessagePackage:
+            messages.push_back(ModifyMessage(package.message, user_name));
+            receivedMessages.push_back(package);
+            cout << "Mesaj alındı: " << package.message << endl;
+            break;
+
+        case MessageType::EraseMessagePackage:
+            {
+                cout << "Silme isteği alındı: " << package.message << endl;
+                auto foundMessage = std::find_if(receivedMessages.begin(), receivedMessages.end(),
+                                                 [&](const MessagePackage& msg)
+                                                 {
+                                                     return msg.message == std::string(package.message);
+                                                 });
+
+                if (foundMessage != receivedMessages.end())
+                {
+                    cout << "Mesaj sahibi: " << foundMessage->m_MessageOwner << ", Paket sahibi: " << package.m_MessageOwner << endl;
+                    if (strcmp(foundMessage->m_MessageOwner, package.m_MessageOwner) == 0)
+                    {
+                        messages.erase(std::remove(messages.begin(), messages.end(), package.message), messages.end());
+                        receivedMessages.erase(foundMessage);
+                        cout << "Mesaj başarıyla silindi." << endl;
+                    }
+                    else
+                    {
+                        cout << "Mesaj sahibi uyuşmuyor, silinemedi." << endl;
+                    }
+                }
+                else
+                {
+                    cout << "Silinecek mesaj bulunamadı!" << endl;
+                }
+            }
+            break;
         }
     }
 }
