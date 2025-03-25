@@ -2,30 +2,20 @@
 #include "clientWindow.h"
 #include <GLFW/glfw3.h>
 
-clientWindow* client_window;
-chatClient* chat_client;
+int main() {
+	clientWindow window;
+	chatClient client;
 
-GLFWwindow* window;
+	GLFWwindow* glfwWindow = window.Init(&client);
+	if (!glfwWindow) return -1;
 
-int main()
-{
-	client_window = new clientWindow();
-	chat_client = new chatClient();
-
-	window = client_window->Init(chat_client);
-
-	while (!glfwWindowShouldClose(window))
-	{
-		client_window->StartTick();
-		client_window->Tick();
-		client_window->EndTick();
+	while (!glfwWindowShouldClose(glfwWindow)) {
+		window.StartTick();
+		window.Tick();
+		window.EndTick();
 	}
 
-	client_window->Shutdown();
-	chat_client->DisconnectToServer();
-
-	delete client_window;
-	delete chat_client;
-
+	window.Shutdown();
+	client.DisconnectToServer();
 	return 0;
 }

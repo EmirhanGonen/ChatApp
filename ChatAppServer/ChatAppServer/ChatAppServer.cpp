@@ -26,8 +26,7 @@ bool Initialize() {
 }
 
 void BroadcastMessage(const MessagePackage& message, SOCKET sender) {
-    lock_guard<mutex> lock(clientsMutex); // Clients vektörünü kilitle
-    
+    lock_guard<mutex> lock(clientsMutex);
     const char* data = reinterpret_cast<const char*>(&message);
     int dataSize = sizeof(MessagePackage);
 
@@ -70,62 +69,55 @@ void HandleClient(SOCKET clientSocket) {
         BroadcastMessage(package, clientSocket);
     }
 }
-int main()
-{
-    if (!Initialize())
-    {
+
+int main() {
+    if (!Initialize()) {
+        cerr << "Winsock başlatılamadı!" << endl;
         return -1;
     }
-    SOCKET serverSocket, clientSocket;
-    sockaddr_in serverAddr, clientAddr;
-    int clientAddrSize = sizeof(clientAddr);
-    const int port = 8817;
-    const int listen_count = 10;
 
-    serverSocket = socket(AF_INET, SOCK_STREAM, 0);
-    if (serverSocket == INVALID_SOCKET)
-    {
-        cout << "Socket create failed." << endl;
-        //WSACleanup();
+    SOCKET serverSocket = socket(AF_INET, SOCK_STREAM, 0);
+    if (serverSocket == INVALID_SOCKET) {
+        cerr << "Socket oluşturulamadı!" << endl;
         Cleanup();
         return -1;
     }
 
+    sockaddr_in serverAddr;
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_addr.S_un.S_addr = INADDR_ANY;
-    serverAddr.sin_port = htons(port);
+    serverAddr.sin_port = htons(8817);
 
-    if (bind(serverSocket, (sockaddr*)&serverAddr, sizeof(serverAddr)) == SOCKET_ERROR)
-    {
-        cout << "Bind failed" << endl;
-        CloseSocketAndCleanup(serverSocket);
-        //closesocket(serverSocket);
-        //WSACleanup();
-        return -1;
-    }
-
-    if (listen(serverSocket, listen_count) == SOCKET_ERROR)
-    {
-        cout << "Listen error" << endl;
+    if (bind(serverSocket, (sockaddr*)&serverAddr, sizeof(serverAddr)) == SOCKET_ERROR) {
+        cerr << "Bind hatası: " << WSAGetLastError() << endl;
         CloseSocketAndCleanup(serverSocket);
         return -1;
     }
-    cout << "Server is running... Waiting Connections..." << endl;
 
-    while (true)
-    {
-        clientSocket = accept(serverSocket, reinterpret_cast<sockaddr*>(&clientAddr), &clientAddrSize);
-        if (clientSocket == INVALID_SOCKET)
-        {
-            cout << "connection is not accepted" << endl;
+    if (listen(serverSocket, 10) == SOCKET_ERROR) {
+        cerr << "Listen hatası: " << WSAGetLastError() << endl;
+        CloseSocketAndCleanup(serverSocket);
+        return -1;
+    }
+
+    cout << "Sunucu çalışıyor..." << endl;
+    while (true) {
+        sockaddr_in clientAddr;
+        int clientAddrSize = sizeof(clientAddr);
+        SOCKET clientSocket = accept(serverSocket, (sockaddr*)&clientAddr, &clientAddrSize);
+        if (clientSocket == INVALID_SOCKET) {
+            cerr << "Kabul hatası: " << WSAGetLastError() << endl;
             continue;
         }
-        clients.push_back(clientSocket);
 
-        thread clientThread(HandleClient, clientSocket);
-        clientThread.detach();
+        {
+            lock_guard<mutex> lock(clientsMutex);
+            clients.push_back(clientSocket);
+        }
+
+        thread(HandleClient, clientSocket).detach();
     }
-    cout << "Server has started succesfully" << endl;
+
     CloseSocketAndCleanup(serverSocket);
-    return 1;
+    return 0;
 }

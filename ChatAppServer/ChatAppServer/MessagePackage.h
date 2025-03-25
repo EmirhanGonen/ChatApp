@@ -20,7 +20,7 @@ struct MessagePackage {
     }
 
     MessagePackage(MessageType type, const std::string& msg, 
-                  const std::string& messageOwner, const std::string& packageOwner) {
+                   const std::string& messageOwner, const std::string& packageOwner) {
         memset(this, 0, sizeof(MessagePackage));
         m_MessageType = type;
         
@@ -28,7 +28,6 @@ struct MessagePackage {
         strncpy_s(m_PackageOwner, packageOwner.c_str(), sizeof(m_PackageOwner) - 1);
         strncpy_s(message, msg.c_str(), sizeof(message) - 1);
         
-        // Null-termination garantisi
         m_MessageOwner[sizeof(m_MessageOwner)-1] = '\0';
         m_PackageOwner[sizeof(m_PackageOwner)-1] = '\0';
         message[sizeof(message)-1] = '\0';
