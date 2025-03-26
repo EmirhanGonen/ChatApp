@@ -35,7 +35,7 @@ void BroadcastMessage(const MessagePackage& message, SOCKET sender) {
         while (totalSent < dataSize) {
             int sent = send(client, data + totalSent, dataSize - totalSent, 0);
             if (sent == SOCKET_ERROR) {
-                cerr << "Gönderme hatası: " << WSAGetLastError() << endl;
+                cerr << "Send error: " << WSAGetLastError() << endl;
                 {
                     lock_guard<mutex> lock(clientsMutex);
                     clients.erase(remove(clients.begin(), clients.end(), client), clients.end());
@@ -72,13 +72,13 @@ void HandleClient(SOCKET clientSocket) {
 
 int main() {
     if (!Initialize()) {
-        cerr << "Winsock başlatılamadı!" << endl;
+        cerr << "Failed to initialize Winsock!" << endl;
         return -1;
     }
 
     SOCKET serverSocket = socket(AF_INET, SOCK_STREAM, 0);
     if (serverSocket == INVALID_SOCKET) {
-        cerr << "Socket oluşturulamadı!" << endl;
+        cerr << "Failed to create socket!" << endl;
         Cleanup();
         return -1;
     }
@@ -89,24 +89,24 @@ int main() {
     serverAddr.sin_port = htons(8817);
 
     if (bind(serverSocket, (sockaddr*)&serverAddr, sizeof(serverAddr)) == SOCKET_ERROR) {
-        cerr << "Bind hatası: " << WSAGetLastError() << endl;
+        cerr << "Bind error: " << WSAGetLastError() << endl;
         CloseSocketAndCleanup(serverSocket);
         return -1;
     }
 
     if (listen(serverSocket, 10) == SOCKET_ERROR) {
-        cerr << "Listen hatası: " << WSAGetLastError() << endl;
+        cerr << "Listen error: " << WSAGetLastError() << endl;
         CloseSocketAndCleanup(serverSocket);
         return -1;
     }
 
-    cout << "Sunucu çalışıyor..." << endl;
+    cout << "Server is running..." << endl;
     while (true) {
         sockaddr_in clientAddr;
         int clientAddrSize = sizeof(clientAddr);
         SOCKET clientSocket = accept(serverSocket, (sockaddr*)&clientAddr, &clientAddrSize);
         if (clientSocket == INVALID_SOCKET) {
-            cerr << "Kabul hatası: " << WSAGetLastError() << endl;
+            cerr << "Accept error: " << WSAGetLastError() << endl;
             continue;
         }
 

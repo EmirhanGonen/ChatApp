@@ -54,8 +54,7 @@ void clientWindow::Tick() {
     }
 
     if (!nickname_changed) {
-        ImGui::InputText("User Name", nick_name_buffer, sizeof(nick_name_buffer), ImGuiInputTextFlags_EnterReturnsTrue);
-        if (ImGui::Button("Apply") || ImGui::IsItemActive()) {
+        if (ImGui::InputText("User Name", nick_name_buffer, sizeof(nick_name_buffer), ImGuiInputTextFlags_EnterReturnsTrue)) {
             chat_client->SetUserName(nick_name_buffer);
             nickname_changed = true;
         }

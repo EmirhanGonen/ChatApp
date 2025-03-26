@@ -24,9 +24,9 @@ struct MessagePackage {
         memset(this, 0, sizeof(MessagePackage));
         m_MessageType = type;
         
-        strncpy_s(m_MessageOwner, messageOwner.c_str(), sizeof(m_MessageOwner) - 1);
-        strncpy_s(m_PackageOwner, packageOwner.c_str(), sizeof(m_PackageOwner) - 1);
-        strncpy_s(message, msg.c_str(), sizeof(message) - 1);
+        strncpy_s(m_MessageOwner, messageOwner.c_str(), sizeof(m_MessageOwner)-1);
+        strncpy_s(m_PackageOwner, packageOwner.c_str(), sizeof(m_PackageOwner)-1);
+        strncpy_s(message, msg.c_str(), sizeof(message)-1);
         
         m_MessageOwner[sizeof(m_MessageOwner)-1] = '\0';
         m_PackageOwner[sizeof(m_PackageOwner)-1] = '\0';

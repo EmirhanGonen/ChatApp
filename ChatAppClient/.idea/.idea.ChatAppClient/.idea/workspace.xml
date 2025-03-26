@@ -8,22 +8,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa1ecc70-21cd-400c-9979-4daf24a7f765" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ChatAppClient/ChatAppClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppClient/ChatAppClient.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ChatAppClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChatAppClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatAppClient/MessagePackage.h" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppClient/MessagePackage.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatAppClient/chatClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppClient/chatClient.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatAppClient/chatClient.h" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppClient/chatClient.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatAppClient/clientWindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppClient/clientWindow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatAppClient/clientWindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppClient/clientWindow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatAppClient/x64/Debug/ChatAppClient.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppClient/x64/Debug/ChatAppClient.ilk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatAppClient/x64/Debug/ChatAppClient.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppClient/x64/Debug/ChatAppClient.tlog/CL.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatAppClient/x64/Debug/ChatAppClient.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppClient/x64/Debug/ChatAppClient.tlog/CL.read.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatAppClient/x64/Debug/ChatAppClient.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppClient/x64/Debug/ChatAppClient.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatAppClient/x64/Debug/ChatAppClient.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppClient/x64/Debug/ChatAppClient.tlog/link.read.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatAppClient/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppClient/x64/Debug/vc143.idb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatAppClient/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ChatAppClient/x64/Debug/vc143.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/x64/Debug/ChatAppClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/ChatAppClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/imgui.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppServer/.idea/.idea.ChatAppServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppServer/.idea/.idea.ChatAppServer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ChatAppServer/ChatAppServer/ChatAppServer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppServer/ChatAppServer/ChatAppServer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ChatAppServer/ChatAppServer/MessagePackage.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppServer/ChatAppServer/MessagePackage.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppServer/ChatAppServer/x64/Debug/ChatAppServer.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppServer/ChatAppServer/x64/Debug/ChatAppServer.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppServer/ChatAppServer/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppServer/ChatAppServer/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppServer/ChatAppServer/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppServer/ChatAppServer/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatAppServer/x64/Debug/ChatAppServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatAppServer/x64/Debug/ChatAppServer.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +80,18 @@
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="AUTO_DETECT" />
         <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/ChatAppClient/ChatAppClient.vcxproj" />
       </configuration_1>
+      <configuration_2 setup="1">
+        <option name="CONFIGURATION" value="Release" />
+        <option name="PLATFORM" value="x64" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="AUTO_DETECT" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/ChatAppClient/ChatAppClient.vcxproj" />
+      </configuration_2>
       <option name="DEFAULT_PROJECT_PATH" value="$PROJECT_DIR$/ChatAppClient/ChatAppClient.vcxproj" />
       <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/ChatAppClient/ChatAppClient.vcxproj" />
       <option name="AUTO_SELECT_PRIORITY" value="0" />
@@ -101,7 +117,8 @@
       <workItem from="1742731216964" duration="2768000" />
       <workItem from="1742834585964" duration="596000" />
       <workItem from="1742835190515" duration="6065000" />
-      <workItem from="1742933629887" duration="1240000" />
+      <workItem from="1742933629887" duration="3533000" />
+      <workItem from="1742984388574" duration="1429000" />
     </task>
     <servers />
   </component>
